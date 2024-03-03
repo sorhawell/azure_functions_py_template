@@ -8,11 +8,10 @@ import json
 import logging
 
 
-
 app = func.FunctionApp()
 
 import os
-
+import my_stuff;
 
 
 def list_files(startpath):
@@ -35,7 +34,9 @@ def HttpExample(req: func.HttpRequest) -> func.HttpResponse:
     
     logging.info('Python HTTP trigger function processed a request.')
 
-    import my_stuff;
+  
+    #POC use local package which again uses sqlalchemy
+    logging.info(str(my_stuff.sa))
 
     name = req.params.get('name')
     if not name:

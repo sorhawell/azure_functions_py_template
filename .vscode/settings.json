@@ -1,0 +1,5 @@
+{
+    "python.analysis.extraPaths": [ 
+        "./my-stuff/.python_packages/lib/site-packages"
+    ]
+}
